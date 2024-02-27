@@ -1,3 +1,6 @@
+on: push
+
+jobs:
   job1:
     name: First job
     runs-on: ubuntu-latest
@@ -8,9 +11,9 @@
     run: env | sort
    job2:
      name: Second job
-     runs-on: windows-lates
+     runs-on: windows-latest
      steps:
        -name: Step one
        uses: actions/checkout@v3
-       -name: Stpe two
+       -name: Step two
         run: "Get-ChildItem | Env: Sort-Object Name"
